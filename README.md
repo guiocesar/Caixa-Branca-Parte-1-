@@ -5,7 +5,8 @@
 
 ![Grafo de Fluxo](https://github.com/user-attachments/assets/98de8f9b-26c6-455c-a216-7f5b596494c4)
 
-![Grafo de fluxo lógico](https://github.com/user-attachments/assets/b00580f9-2be2-46da-a7ce-4c93bc7479ed)
+
+![Grafo de fluxo lógico](https://github.com/user-attachments/assets/79f61e67-daf1-4ed4-ac5a-3c333efe8386)
 
 
 N1 -> Inicialização de variáveis e construção da query SQL.
