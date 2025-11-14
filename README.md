@@ -1,7 +1,11 @@
-# Caixa-Branca-Parte-1-
+# Caixa-Branca-Parte-1-Análise Estrutural 
 
 
 ->  Notação de Grafo de Fluxo
+
+
+
+## Grafo de Fluxo
 
 ![Grafo de Fluxo](https://github.com/user-attachments/assets/98de8f9b-26c6-455c-a216-7f5b596494c4)
 
@@ -10,98 +14,87 @@
 ![Grafo de fluxo lógico](https://github.com/user-attachments/assets/79f61e67-daf1-4ed4-ac5a-3c333efe8386)
 
 
-N1 -> Inicialização de variáveis e construção da query SQL.
+### Descrição dos Nós (N)
 
-N2 -> Início do bloco try
+* **N1**: Inicialização de variáveis e construção da query SQL.
+* **N2**: Início do bloco `try` (criação do Statement).
+* **N3**: Ponto de Decisão: `if (rs.next())`.
+* **N4**: Bloco `if` (condição verdadeira): `result = true; nome = rs.getString("nome");`.
+* **N5**: Fim do bloco `try` / Início do bloco `catch`.
+* **N6**: Bloco `catch` (tratamento de exceção).
+* **N7**: Ponto de Saída: `return result;`.
 
-N3 -> Ponto de Decisão: if 
+### Arestas (E)
 
-N4 -> Bloco if (condição verdadeira)
+* **E1**: N1 -> N2
+* **E2**: N2 -> N3
+* **E3**: N3 -> N4 (True)
+* **E4**: N3 -> N5 (False)
+* **E5**: N4 -> N5
+* **E6**: N5 -> N7 (Fluxo de sucesso)
+* **E7**: N2 -> N6 (Fluxo de Exceção)
+* **E8**: N6 -> N7
 
-N5 -> Fim do bloco try / Início do bloco catch.
+---
 
-N6 -> Bloco catch.
+## Complexidade Ciclomática (V(G))
 
-N7 -> Ponto de Saída: return result;
+A complexidade ciclomática é uma métrica de software que indica a complexidade de um programa por meio da contagem do número de caminhos linearmente independentes no grafo de fluxo.
 
+**Fórmula**: `V(G) = E - N + 2P`
 
+Onde:
+* `E` = Número de Arestas
+* `N` = Número de Nós
+* `P` = Número de Componentes Conectados (normalmente 1 para um único programa ou método)
 
+Cálculo para `verificarUsuario`
 
+* `E = 8` (Arestas)
+* `N = 7` (Nós)
+* `P = 1`
+  
+`V(G) = 8 - 7 + 2 * 1`
+`V(G) = 1 + 2`
+`V(G) = 3`
 
--> Arestas (E):
+**Resultado**: A Complexidade Ciclomática para o método `verificarUsuario` é **3**.
 
-E1: N1 -> N2
+---
 
-E2: N2 -> N3
+## Caminhos Básicos do Código
 
-E3: N3 -> N4 (True)
+Com base na Complexidade Ciclomática de 3, identificamos 3 caminhos básicos independentes:
 
-E4: N3 -> N5 (False)
+1.  **Caminho 1 (Sucesso - Usuário Encontrado):**
+    * **Fluxo**: `N1 → N2 → N3 (True) → N4 → N5 → N7`
+    * **Cenário de Teste**: Fornecer um login e senha válidos que resultem em um registro encontrado no `ResultSet`.
 
-E5: N4 -> N5
+2.  **Caminho 2 (Sucesso - Usuário Não Encontrado):**
+    * **Fluxo**: `N1 → N2 → N3 (False) → N5 → N7`
+    * **Cenário de Teste**: Fornecer um login e senha que não resultem em nenhum registro no `ResultSet` (ou seja, usuário não existe).
 
-E6: N5 -> N7 (Fluxo de sucesso)
+3.  **Caminho 3 (Falha - Exceção):**
+    * **Fluxo**: `N1 → N2 → N6 → N7`
+    * **Cenário de Teste**: Simular uma falha na execução da query (ex: erro de sintaxe SQL, conexão perdida, `Connection` nula, etc.) que force o fluxo para o bloco `catch`.
 
-E7: N2 -> N6 (Fluxo de Exceção)
+---
 
-E8: N6 -> N7
+## Análise de Complexidade Ciclomática Adicional
 
+**Exemplo hipotético (análise de um outro trecho de código):**
 
+**Cálculo da Complexidade Ciclomática:**
+* `E = 4` (Arestas)
+* `N = 4` (Nós)
+* `P = 1`
 
+`V(G) = 4 - 4 + 2 * 1`
+`V(G) = 0 + 2`
+`V(G) = 2`
 
--> Complexidade Ciclomática 
+**Resultado**: A Complexidade Ciclomática é **2**.
 
-V(G)=E−N+2P
-
-Cálculo:
-$E = 8$ (Arestas)
-
-$N = 7$ (Nós)
-
-$P = 1$ 
-
-V(G)=8−7+2×1
-
-V(G)=1+2
-
-V(G)=3
-
-
-Resultado: A Complexidade do cod é 3.
-
-
-
--> Caminhos Básicos do código 
-
-Com base na Complexidade Ciclomática de 3:
-
-Caminho 1 (Sucesso - Usuário Encontrado):  N1 → N2 → N3 (True) → N4 → N5 → N7
-
-Cenário de Teste: Fornecer um login e senha válidos que resultem em um registro no ResultSet.
-
-Caminho 2 (Sucesso - Usuário Não Encontrado):  N1 → N2 → N3 (False) → N5 → N7
-
-Cenário de Teste: Fornecer um login e senha que não resultem em nenhum registro no ResultSet.
-
-Caminho 3 (Falha - Exceção): Fluxo: N1 → N2 → N6 → N7
-
-Cenário de Teste: Simular uma falha na execução da query (ex: erro de sintaxe SQL, conexão perdida, conn nulo, etc.) que force o fluxo para o bloco catch.
-
-
-
-
-
--> Análisando a complexidade Ciclomática e os caminhos do meu código
-
-Cálculo da Complexidade Ciclomática:
-$E = 4$ (Arestas)
-$N = 4$ (Nós)
-$P = 1$
-
-V(G)=4−4+2×1=2
-
-Resultado: A Complexidade Ciclomática é 2.
-
-Caminhos:
-Caminho 1: Conexão bem-sucedida.
-Caminho 2: Falha na conexão (exceção capturada).
+**Caminhos:**
+1.  Caminho 1: Conexão bem-sucedida.
+2.  Caminho 2: Falha na conexão (exceção capturada).
