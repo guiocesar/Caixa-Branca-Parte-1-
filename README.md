@@ -1,5 +1,6 @@
 # Caixa-Branca-Parte-1-Análise Estrutural 
 
+**link do MIRO: https://miro.com/welcomeonboard/Tkx1M0hIVkpYWENoM09sYVBBU0syNEp5OE5MWEN6SUI1WFkzSnRjUVNDOU1kS2dJOEt3SDdnUGRFNTdhTy9SeHdyQVF2UnQvZlVMdGhRK0oyVm0yZENrN1ZXV2hhRDd3NDhQVmpsbzdyamxCZ2xWQW5BbkpQbGpuS0cwVXBVcGh3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=968854975211**
 
 **Grafo de Fluxo**
 
