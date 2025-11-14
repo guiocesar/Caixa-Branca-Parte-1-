@@ -2,6 +2,11 @@
 
 **link do MIRO: https://miro.com/welcomeonboard/Tkx1M0hIVkpYWENoM09sYVBBU0syNEp5OE5MWEN6SUI1WFkzSnRjUVNDOU1kS2dJOEt3SDdnUGRFNTdhTy9SeHdyQVF2UnQvZlVMdGhRK0oyVm0yZENrN1ZXV2hhRDd3NDhQVmpsbzdyamxCZ2xWQW5BbkpQbGpuS0cwVXBVcGh3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=968854975211**
 
+
+**Teste de Caixa Branca Estática: [PLANO DE TESTE.xlsx](https://github.com/user-attachments/files/23553848/PLANO.DE.TESTE.xlsx)
+**
+
+
 **Grafo de Fluxo**
 
 ![Grafo de Fluxo](https://github.com/user-attachments/assets/98de8f9b-26c6-455c-a216-7f5b596494c4)
