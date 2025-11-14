@@ -3,8 +3,9 @@
 
 ->  Notação de Grafo de Fluxo
 
-![Untitled (1)](https://github.com/user-attachments/assets/c661048a-df85-4f20-baac-d9ac782e175c)
+![Grafo de Fluxo](https://github.com/user-attachments/assets/98de8f9b-26c6-455c-a216-7f5b596494c4)
 
+![Grafo de fluxo lógico](https://github.com/user-attachments/assets/b00580f9-2be2-46da-a7ce-4c93bc7479ed)
 
 
 N1 -> Inicialização de variáveis e construção da query SQL.
