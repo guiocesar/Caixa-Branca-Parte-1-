@@ -1,11 +1,7 @@
 # Caixa-Branca-Parte-1-Análise Estrutural 
 
 
-->  Notação de Grafo de Fluxo
-
-
-
-## Grafo de Fluxo
+**Grafo de Fluxo**
 
 ![Grafo de Fluxo](https://github.com/user-attachments/assets/98de8f9b-26c6-455c-a216-7f5b596494c4)
 
@@ -14,7 +10,7 @@
 ![Grafo de fluxo lógico](https://github.com/user-attachments/assets/79f61e67-daf1-4ed4-ac5a-3c333efe8386)
 
 
-Descrição dos Nós (N)
+**Descrição dos Nós (N)**
 
 * **N1**: Inicialização de variáveis e construção da query SQL.
 * **N2**: Início do bloco try (criação do Statement).
@@ -24,7 +20,7 @@ Descrição dos Nós (N)
 * **N6**: Bloco catch (tratamento de exceção).
 * **N7**: Ponto de Saída: return result;.
 
-Arestas (E)
+**Arestas (E)**
 
 * **E1**: N1 -> N2
 * **E2**: N2 -> N3
@@ -37,9 +33,7 @@ Arestas (E)
 
 ---
 
-Complexidade Ciclomática (V(G))
-
-A complexidade ciclomática é uma métrica de software que indica a complexidade de um programa por meio da contagem do número de caminhos linearmente independentes no grafo de fluxo.
+**Complexidade Ciclomática**
 
 V(G) = E - N + 2P
 
@@ -55,7 +49,7 @@ A Complexidade Ciclomática é **3**.
 
 ---
 
-Caminhos Básicos do Código
+**Caminhos Básicos do Código**
 
 Com base na Complexidade Ciclomática de 3, identificamos 3 caminhos básicos independentes:
 
@@ -72,8 +66,7 @@ Com base na Complexidade Ciclomática de 3, identificamos 3 caminhos básicos in
     * **Cenário de Teste**: Simular uma falha na execução da query (ex: erro de sintaxe) que force o fluxo para o bloco catch.
 
 ---
-
-## Análise de Complexidade Ciclomática da Reformulação do código
+**Análise de Complexidade Ciclomática da Reformulação do código**
 
 
 **Cálculo da Complexidade Ciclomática:**
