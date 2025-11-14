@@ -14,17 +14,17 @@
 ![Grafo de fluxo lógico](https://github.com/user-attachments/assets/79f61e67-daf1-4ed4-ac5a-3c333efe8386)
 
 
-### Descrição dos Nós (N)
+Descrição dos Nós (N)
 
 * **N1**: Inicialização de variáveis e construção da query SQL.
-* **N2**: Início do bloco `try` (criação do Statement).
-* **N3**: Ponto de Decisão: `if (rs.next())`.
-* **N4**: Bloco `if` (condição verdadeira): `result = true; nome = rs.getString("nome");`.
-* **N5**: Fim do bloco `try` / Início do bloco `catch`.
-* **N6**: Bloco `catch` (tratamento de exceção).
-* **N7**: Ponto de Saída: `return result;`.
+* **N2**: Início do bloco try (criação do Statement).
+* **N3**: Ponto de Decisão: if (rs.next()).
+* **N4**: Bloco if (condição verdadeira): result = true; nome = rs.getString("nome");.
+* **N5**: Fim do bloco try / Início do bloco catch.
+* **N6**: Bloco catch (tratamento de exceção).
+* **N7**: Ponto de Saída: return result;.
 
-### Arestas (E)
+Arestas (E)
 
 * **E1**: N1 -> N2
 * **E2**: N2 -> N3
@@ -37,26 +37,19 @@
 
 ---
 
-## Complexidade Ciclomática (V(G))
+Complexidade Ciclomática (V(G))
 
 A complexidade ciclomática é uma métrica de software que indica a complexidade de um programa por meio da contagem do número de caminhos linearmente independentes no grafo de fluxo.
 
-**Fórmula**: `V(G) = E - N + 2P`
+V(G) = E - N + 2P
 
-Onde:
-* `E` = Número de Arestas
-* `N` = Número de Nós
-* `P` = Número de Componentes Conectados (normalmente 1 para um único programa ou método)
-
-Cálculo para `verificarUsuario`
-
-* `E = 8` (Arestas)
-* `N = 7` (Nós)
-* `P = 1`
+* E = 8 (Arestas)
+* N = 7 (Nós)
+* P = 1
   
-`V(G) = 8 - 7 + 2 * 1`
-`V(G) = 1 + 2`
-`V(G) = 3`
+V(G) = 8 - 7 + 2 * 1
+V(G) = 1 + 2
+V(G) = 3
 
 **Resultado**: A Complexidade Ciclomática para o método `verificarUsuario` é **3**.
 
