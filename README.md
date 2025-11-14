@@ -51,43 +51,42 @@ V(G) = 8 - 7 + 2 * 1
 V(G) = 1 + 2
 V(G) = 3
 
-**Resultado**: A Complexidade Ciclomática para o método `verificarUsuario` é **3**.
+A Complexidade Ciclomática é **3**.
 
 ---
 
-## Caminhos Básicos do Código
+Caminhos Básicos do Código
 
 Com base na Complexidade Ciclomática de 3, identificamos 3 caminhos básicos independentes:
 
 1.  **Caminho 1 (Sucesso - Usuário Encontrado):**
-    * **Fluxo**: `N1 → N2 → N3 (True) → N4 → N5 → N7`
-    * **Cenário de Teste**: Fornecer um login e senha válidos que resultem em um registro encontrado no `ResultSet`.
+    * **Fluxo**: N1 → N2 → N3 (True) → N4 → N5 → N7
+    * **Cenário de Teste**: Fornecer um login e senha válidos que resultem em um registro encontrado no ResultSet.
 
 2.  **Caminho 2 (Sucesso - Usuário Não Encontrado):**
-    * **Fluxo**: `N1 → N2 → N3 (False) → N5 → N7`
-    * **Cenário de Teste**: Fornecer um login e senha que não resultem em nenhum registro no `ResultSet` (ou seja, usuário não existe).
+    * **Fluxo**: N1 → N2 → N3 (False) → N5 → N7
+    * **Cenário de Teste**: Fornecer um login e senha que não resultem em nenhum registro no ResultSet (ou seja, usuário não existe).
 
 3.  **Caminho 3 (Falha - Exceção):**
-    * **Fluxo**: `N1 → N2 → N6 → N7`
-    * **Cenário de Teste**: Simular uma falha na execução da query (ex: erro de sintaxe SQL, conexão perdida, `Connection` nula, etc.) que force o fluxo para o bloco `catch`.
+    * **Fluxo**: N1 → N2 → N6 → N7
+    * **Cenário de Teste**: Simular uma falha na execução da query (ex: erro de sintaxe) que force o fluxo para o bloco catch.
 
 ---
 
-## Análise de Complexidade Ciclomática Adicional
+## Análise de Complexidade Ciclomática da Reformulação do código
 
-**Exemplo hipotético (análise de um outro trecho de código):**
 
 **Cálculo da Complexidade Ciclomática:**
-* `E = 4` (Arestas)
-* `N = 4` (Nós)
-* `P = 1`
+* E = 4 (Arestas)
+* N = 4 (Nós)
+* P = 1
 
-`V(G) = 4 - 4 + 2 * 1`
-`V(G) = 0 + 2`
-`V(G) = 2`
+V(G) = 4 - 4 + 2 * 1
+V(G) = 0 + 2
+V(G) = 2
 
-**Resultado**: A Complexidade Ciclomática é **2**.
+A Complexidade Ciclomática é **2**.
 
 **Caminhos:**
 1.  Caminho 1: Conexão bem-sucedida.
-2.  Caminho 2: Falha na conexão (exceção capturada).
+2.  Caminho 2: Falha na conexão.
