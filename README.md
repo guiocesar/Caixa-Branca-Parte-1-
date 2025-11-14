@@ -3,8 +3,7 @@
 **link do MIRO: https://miro.com/welcomeonboard/Tkx1M0hIVkpYWENoM09sYVBBU0syNEp5OE5MWEN6SUI1WFkzSnRjUVNDOU1kS2dJOEt3SDdnUGRFNTdhTy9SeHdyQVF2UnQvZlVMdGhRK0oyVm0yZENrN1ZXV2hhRDd3NDhQVmpsbzdyamxCZ2xWQW5BbkpQbGpuS0cwVXBVcGh3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=968854975211**
 
 
-**Teste de Caixa Branca Estática: [PLANO DE TESTE.xlsx](https://github.com/user-attachments/files/23553848/PLANO.DE.TESTE.xlsx)
-**
+**Teste de Caixa Branca Estática:** [Teste de Caixa Branca Estática.xlsx](https://github.com/user-attachments/files/23553872/Teste.de.Caixa.Branca.Estatica.xlsx)
 
 
 **Grafo de Fluxo**
