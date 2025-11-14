@@ -25,6 +25,9 @@ N6 -> Bloco catch.
 N7 -> Ponto de Saída: return result;
 
 
+
+
+
 -> Arestas (E):
 
 E1: N1 -> N2
@@ -43,17 +46,26 @@ E7: N2 -> N6 (Fluxo de Exceção)
 
 E8: N6 -> N7
 
+
+
+
 -> Complexidade Ciclomática 
+
 V(G)=E−N+2P
 
 Cálculo:
 $E = 8$ (Arestas)
+
 $N = 7$ (Nós)
+
 $P = 1$ 
 
 V(G)=8−7+2×1
+
 V(G)=1+2
+
 V(G)=3
+
 
 Resultado: A Complexidade do cod é 3.
 
