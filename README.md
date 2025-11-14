@@ -5,6 +5,7 @@
 
 ![Grafo de Fluxo](https://github.com/user-attachments/assets/98de8f9b-26c6-455c-a216-7f5b596494c4)
 
+![NÓS E ARESTAS](https://github.com/user-attachments/assets/210e4c8a-2f18-48af-9126-d014c8ac182b)
 
 ![Grafo de fluxo lógico](https://github.com/user-attachments/assets/79f61e67-daf1-4ed4-ac5a-3c333efe8386)
 
